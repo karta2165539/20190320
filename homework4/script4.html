@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #f1f1f1"></canvas>
+<script>
+	var del=setInterval(ani,20);
+	var x,y,a,b,check;
+	x=470;
+	y=0;
+	check=true;
+	a=0;
+	b=0;					
+	function ani(){
+	var c =document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+    ctx.fillStyle="red";    
+    ctx.clearRect(a,b,500,500);
+    ctx.fillRect(x,y,30,30);
+    a=x;
+    b=y;
+    if(check){    	
+    	x-=1;    	
+    	y+=1;
+    	if(x<0){
+    	check=false;
+    	}
+    }else{    	
+    	x+=1;
+    	y-=1;
+    	if(x>470){
+    	check=true;
+    	}
+	}
+}
+</script>
+</body>
+</html>

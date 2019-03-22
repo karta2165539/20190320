@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Caculator</h2>
+	<p id="demo"></p>
+
+number1:<input type="number" id="mydata" value="2"><br>
+number2:<input type="number" id="mydata2" value="3"><br>
+<button  onclick=add()>+</button>
+<button  onclick=minus()>-</button>
+<button  onclick=multiple()>*</button>
+<button  onclick=devide()>/</button><br>
+<button  onclick=zero()>C</button><br>
+<script>
+	function add(){
+		var x,y
+		x=parseFloat(document.getElementById("mydata").value);
+		y=parseFloat(document.getElementById("mydata2").value);
+		document.getElementById("demo").innerHTML=x+y;
+	}
+	function minus(){
+		var x,y
+		x=parseFloat(document.getElementById("mydata").value);
+		y=parseFloat(document.getElementById("mydata2").value);
+		document.getElementById("demo").innerHTML=x-y;
+	}
+	function multiple(){
+		var x,y
+		x=parseFloat(document.getElementById("mydata").value);
+		y=parseFloat(document.getElementById("mydata2").value);
+		document.getElementById("demo").innerHTML=x*y;
+	}
+	function devide(){
+		var x,y
+		x=parseFloat(document.getElementById("mydata").value);
+		y=parseFloat(document.getElementById("mydata2").value);
+		document.getElementById("demo").innerHTML=x/y;
+	}
+	function zero() {
+		document.getElementById("mydata").value=document.clear;
+		document.getElementById("mydata2").value=document.clear;
+		document.getElementById("demo").innerHTML="";	
+	}
+	
+
+</script>
+</body>
+</html>

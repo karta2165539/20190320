@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2>Score</h2>
+<p id="demo"></p>
+<input type="number" id="score" value="60"><br>
+<button onclick="myfunction()">submit</button>
+<script>
+	function myfunction() {
+		var score,comment;
+		score=parseFloat(document.getElementById("score").value);
+		
+		if(score<60){
+			comment="Your bad!";
+		}else{
+			comment="Good student!";
+		}
+		document.getElementById("demo").innerHTML=comment;
+	}
+</script>
+</body>
+</html>
